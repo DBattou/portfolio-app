@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  NavLink,
+  Redirect
+} from "react-router-dom";
 import Header from "../components/Header.js";
 import NotFound from "../components/NotFound.js";
 
@@ -8,6 +14,10 @@ const PortfolioHomePage = () => (
 );
 
 const PortfolioPage = props => {
+  if (props.match.params.id < 0 || props.match.params.id > 3) {
+    return <Redirect to="/not-found" />;
+  }
+
   return (
     <div>
       <p>There is my portfolio, click on each items !</p>

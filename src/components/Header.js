@@ -5,7 +5,7 @@ const Header = () => (
   <header>
     <h1>Portfolio</h1>
     <NavLink to="/" activeClassName="bold-link" exact>
-      Home
+      Home😂
     </NavLink>
     <NavLink to="/portfolio" activeClassName="bold-link">
       Portfolio
